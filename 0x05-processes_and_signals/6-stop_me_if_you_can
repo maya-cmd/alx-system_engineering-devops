@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# a Bash script that terminates 4-to_infinity_and_beyond process without using kill or killall
+
+pkill -f "4-to_infinity_and_beyond"
+
+if pgrep -f "4-to_infinity_and_beyond" > /dev/null
+then
+    pkill -9 -f "4-to_infinity_and_beyond"
+fi
